@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-10-08T17:28:57 IST" name="Suite" finished-at="2024-10-08T17:29:52 IST" duration-ms="54422">
+    <groups>
+    </groups>
+    <test started-at="2024-10-08T17:28:57 IST" name="SecondTest" finished-at="2024-10-08T17:29:52 IST" duration-ms="54422">
+      <class name="sparta_console.AdditionalRemarks">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:sparta_console.AdditionalRemarks@f0c8a99]" started-at="2024-10-08T17:28:57 IST" name="setUp" finished-at="2024-10-08T17:29:41 IST" duration-ms="44219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="CO2T369_AddRemarks()[pri:1, instance:sparta_console.AdditionalRemarks@f0c8a99]" started-at="2024-10-08T17:29:41 IST" name="CO2T369_AddRemarks" finished-at="2024-10-08T17:29:51 IST" duration-ms="9902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CO2T369_AddRemarks -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sparta_console.AdditionalRemarks@f0c8a99]" started-at="2024-10-08T17:29:51 IST" name="tearDown" finished-at="2024-10-08T17:29:52 IST" duration-ms="274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- sparta_console.AdditionalRemarks -->
+    </test> <!-- SecondTest -->
+  </suite> <!-- Suite -->
+</testng-results>

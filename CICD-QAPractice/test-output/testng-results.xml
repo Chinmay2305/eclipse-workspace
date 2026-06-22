@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Actual Text: Employee Name]]>
+    </line>
+    <line>
+      <![CDATA[Expected Text: Employee Name]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2026-04-09T15:44:46 IST" name="Default suite" finished-at="2026-04-09T15:44:52 IST" duration-ms="5876">
+    <groups>
+    </groups>
+    <test started-at="2026-04-09T15:44:46 IST" name="Default test" finished-at="2026-04-09T15:44:52 IST" duration-ms="5876">
+      <class name="automation.tests.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:automation.tests.LoginTest@11c9af63]" started-at="2026-04-09T15:44:46 IST" name="setup" finished-at="2026-04-09T15:44:51 IST" duration-ms="4931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifylogin()[pri:0, instance:automation.tests.LoginTest@11c9af63]" started-at="2026-04-09T15:44:51 IST" name="verifylogin" finished-at="2026-04-09T15:44:51 IST" duration-ms="158" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Actual Text: Employee Name]]>
+            </line>
+            <line>
+              <![CDATA[Expected Text: Employee Name]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifylogin -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:automation.tests.LoginTest@11c9af63]" started-at="2026-04-09T15:44:51 IST" name="afterMethod" finished-at="2026-04-09T15:44:51 IST" duration-ms="379" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifylogin status=SUCCESS method=LoginTest.verifylogin()[pri:0, instance:automation.tests.LoginTest@11c9af63] output=Actual Text: Employee Name]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:automation.tests.LoginTest@11c9af63]" started-at="2026-04-09T15:44:51 IST" name="afterTest" finished-at="2026-04-09T15:44:52 IST" duration-ms="368" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- automation.tests.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

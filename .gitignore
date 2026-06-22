@@ -1,0 +1,21 @@
+# Eclipse
+.metadata/
+.settings/
+.classpath
+.project
+
+# IntelliJ
+.idea/
+
+# Maven
+target/
+
+# Logs
+*.log
+
+# Reports
+Reports/
+
+# OS
+.DS_Store
+Thumbs.db

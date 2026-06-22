@@ -1,0 +1,109 @@
+<html>
+  <h2>Student Dashboard</h2>
+
+  <h3>Add Student</h3>
+  <input id="name" placeholder="Name">
+  <input id="percentage" type="number" placeholder="Percentage">
+  <button onclick="addEmployee()">Add</button>
+
+  <h3>Search by name</h3>
+  <input id="search" placeholder="Search by Student name" onkeyup="searchTable()">
+
+  <h3>Filter by Result</h3>
+  <select id="filter" onchange="filterTable()">
+    <option value="ALL">All</option>
+    <option value="PASS">PASS</option>
+    <option value="FAIL">FAIL</option>
+  </select>
+
+  <h3>Student Table</h3>
+  <table border="1" id="table">
+    <tr>
+      <th onclick="sortTable(0)">Name ⬍</th>
+      <th onclick="sortTable(1)">Percentage ⬍</th>
+      <th onclick="sortTable(2)">Result ⬍</th>
+      <th>Action</th>
+    </tr>
+  </table>
+
+  <script>
+    let sortDirection = [true, true, true]; // track asc/desc per column
+
+    function addEmployee() {
+      const name = document.getElementById("name").value;
+      const percentage = document.getElementById("percentage").value;
+
+      if(name === "" || percentage === "") {
+        alert("All fields required");
+        return;
+      }
+
+      const result = percentage >= 80 ? "PASS" : "FAIL";
+
+      const table = document.getElementById("table");
+      const row = table.insertRow();
+
+      row.insertCell(0).innerText = name;
+      row.insertCell(1).innerText = percentage;
+      row.insertCell(2).innerText = result;
+      row.insertCell(3).innerHTML = "<button onclick='deleteRow(this)'>Delete</button>";
+    }
+
+    function deleteRow(btn) {
+      const row = btn.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+    }
+
+    function searchTable() {
+      const input = document.getElementById("search").value.toLowerCase();
+      const rows = document.querySelectorAll("#table tr");
+
+      rows.forEach((row, index) => {
+        if(index === 0) return;
+        const name = row.cells[0].innerText.toLowerCase();
+        row.style.display = name.includes(input) ? "" : "none";
+      });
+    }
+
+    function filterTable() {
+      const filter = document.getElementById("filter").value;
+      const rows = document.querySelectorAll("#table tr");
+
+      rows.forEach((row, index) => {
+        if(index === 0) return;
+        const result = row.cells[2].innerText;
+
+        if(filter === "ALL" || result === filter) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      });
+    }
+
+    function sortTable(colIndex) {
+      const table = document.getElementById("table");
+      const rows = Array.from(table.rows).slice(1);
+
+      const isAsc = sortDirection[colIndex];
+
+      rows.sort((a, b) => {
+        let valA = a.cells[colIndex].innerText;
+        let valB = b.cells[colIndex].innerText;
+
+        if(colIndex === 1) { // numeric sort
+          valA = Number(valA);
+          valB = Number(valB);
+        }
+
+        if(valA < valB) return isAsc ? -1 : 1;
+        if(valA > valB) return isAsc ? 1 : -1;
+        return 0;
+      });
+
+      sortDirection[colIndex] = !isAsc;
+
+      rows.forEach(row => table.appendChild(row));
+    }
+  </script>
+</html>
