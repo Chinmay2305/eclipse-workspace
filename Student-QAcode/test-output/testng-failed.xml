@@ -6,11 +6,11 @@
       <class name="automation.tests.DashboardTest">
         <methods>
           <include name="init"/>
-          <include name="setup"/>
           <include name="afterMethod"/>
+          <include name="setup"/>
           <include name="verifystudentconfirmation"/>
-          <include name="ensureLogin"/>
           <include name="afterTest"/>
+          <include name="ensureLogin"/>
           <include name="verifystudentaddition"/>
         </methods>
       </class> <!-- automation.tests.DashboardTest -->

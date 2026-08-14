@@ -23,14 +23,9 @@ public class DashboardTest extends BaseTest
 //	PageObject_Dashboard pd = new PageObject_Dashboard(driver);
 	
 	@BeforeClass
-	public void init()
+	public void init() throws IOException, InterruptedException
 	{
 		pd = new PageObject_Dashboard(driver);
-	}
-	
-	@BeforeMethod
-	public void ensureLogin() throws IOException, InterruptedException
-	{
 		login();
 	}
 	
